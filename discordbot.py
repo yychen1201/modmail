@@ -7,11 +7,11 @@ intent=discord.Intents.all()
 client = commands.Bot(command_prefix='/',help_command=None,intents=intent)
 @client.event
 async def on_ready():
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name="傳及回請記得打/回報")
+    activity_w = discord.Activity(type=discord.ActivityType.playing, name="發信用/a ＋文字")
     await client.change_presence(activity=activity_w)
     print('online')
 @client.command()
-async def 回報(ctx,*,msg):
+async def a(ctx,*,msg):
     A=ctx.author.id
     await ctx.send("感謝您的訊息")
     user_msg = await client.fetch_user(1009412927754866728)
