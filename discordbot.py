@@ -7,7 +7,7 @@ intent=discord.Intents.all()
 client = commands.Bot(command_prefix='/',help_command=None,intents=intent)
 @client.event
 async def on_ready():
-    activity_w = discord.Activity(type=discord.ActivityType.playing, name="發信用/a ＋文字")
+    activity_w = discord.Activity(type=discord.ActivityType.playing, name="私訊前先看自介")
     await client.change_presence(activity=activity_w)
     print('online')
 @client.command()
